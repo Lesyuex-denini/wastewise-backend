@@ -129,3 +129,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",   
     "http://127.0.0.1:5173",
 ]
+
+import os
+STATIC_URL = '/static/'
+
+# This line tells Django where to collect static files during deployment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Optional but recommended
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
